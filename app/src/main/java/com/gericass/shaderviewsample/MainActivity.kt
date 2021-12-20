@@ -105,7 +105,6 @@ class MainActivity : AppCompatActivity() {
                 bitmap,
                 GLES30.GL_TEXTURE0
             )
-            .addVec2f("resolution", floatArrayOf(1f, 1f))
             .addVec2f("uPointer", floatArrayOf(followPointerX, followPointerY))
             .addFloat("uVelo", 0f)
             .build()

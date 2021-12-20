@@ -3,7 +3,6 @@
 precision mediump float;
 
 uniform sampler2D uTexture;
-uniform vec2 resolution;
 uniform vec2 uPointer;
 uniform float uVelo;
 
@@ -12,7 +11,6 @@ out vec4 fragColor;
 
 float circle(vec2 uv, vec2 disc_center, float disc_radius, float border_size) {
     uv -= disc_center;
-    uv*=resolution;
     float dist = sqrt(dot(uv, uv));
     return smoothstep(disc_radius+border_size, disc_radius-border_size, dist);
 }
